@@ -10,11 +10,18 @@ function Counter() {
 
    // implemenet the decrement function
 
+   function decrement(){
+    if(count>0){
+        setCount(count-1)
+    }
+    
+   }
+
   return (
     <div>
         <button onClick={increment}>Increment</button>
          <h1>{count}</h1>
-        <button>Decrement</button>
+        <button onClick={decrement}>Decrement</button>
     </div>
   )
 }
