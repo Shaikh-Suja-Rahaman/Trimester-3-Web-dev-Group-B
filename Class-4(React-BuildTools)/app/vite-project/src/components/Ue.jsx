@@ -1,8 +1,9 @@
-import React, { use, useEffect, useState } from "react";
+import React, {useEffect, useState } from "react";
 
 function Ue() {
   const [count, setCount] = useState(0);
   const [text , setText] = useState('')
+
 
   function increment() {
     setCount(count + 1);
