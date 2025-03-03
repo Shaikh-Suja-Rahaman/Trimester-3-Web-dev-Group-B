@@ -1,21 +1,24 @@
 import React from "react";
+import Logo from '../assets/movieLogo1.png'
+
+import {Link} from 'react-router-dom'
 
 
 function NavBar() {
   return (
     <div className="flex space-x-8 items-center pl-3 py-4">
-      <a href='/'>Logo</a>
+      <Link to='/'><img className="w-[60px]" src={Logo}/></Link>
 
-      <a href="/"  className="text-blue-500 text-3xl font-bold">
+      <Link to="/"  className="text-blue-500 text-3xl font-bold">
         Movies
-      </a>
+      </Link>
 
-      <a href="/watchlist" className="text-blue-500 text-3xl font-bold">
+      <Link to="/watchlist" className="text-blue-500 text-3xl font-bold">
         Watchlist
-      </a>
-      <a href="/recommend" className="text-blue-500 text-3xl font-bold">
+      </Link>
+      <Link to="/recommend" className="text-blue-500 text-3xl font-bold">
         Movie Recommendations AI
-      </a>
+      </Link>
     </div>
   );
 }
