@@ -4,6 +4,8 @@ import Logo from '../assets/movieLogo1.png'
 import {Link} from 'react-router-dom'
 
 
+
+
 function NavBar() {
   return (
     <div className="flex space-x-8 items-center pl-3 py-4">
