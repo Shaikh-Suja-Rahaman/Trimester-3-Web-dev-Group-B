@@ -14,6 +14,9 @@ function Movies() {
         <MovieCard />
         <MovieCard />
         <MovieCard />
+        <MovieCard />
+        <MovieCard />
+       
       </div>
     </div>
   );
