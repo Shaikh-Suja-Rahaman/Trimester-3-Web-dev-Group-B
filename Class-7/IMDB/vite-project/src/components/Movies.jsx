@@ -1,8 +1,11 @@
-import React, { useEffect } from "react";
+import React, { use, useEffect, useState } from "react";
 import MovieCard from "./MovieCard";
 import axios from "axios";
 
 function Movies() {
+  const [movies , setMovies] = useState(null)
+  const [loading , setLoading] = useState(true)
+
   useEffect(() => {
     axios
       .get(
@@ -10,11 +13,17 @@ function Movies() {
       )
       .then(function (response) {
         console.log(response.data.results);
+        setMovies(response.data.results)
+        setLoading(false)
+         
       })
       .catch(function (err) {
         console.log("Cannot call TMDB API ", err);
       });
   }, []);
+
+
+
 
   return (
     <div>
@@ -22,7 +31,9 @@ function Movies() {
         <h1>Trending Movies</h1>
       </div>
       <div className="flex justify-evenly flex-wrap gap-8 ">
-        <MovieCard />
+       {loading===true? <div>Loading...</div>: movies.map((movieObj)=>(
+        <MovieCard movieObj={movieObj}/>
+       ))}
       </div>
     </div>
   );
