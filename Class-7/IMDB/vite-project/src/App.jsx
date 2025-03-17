@@ -12,7 +12,7 @@ function App() {
 
 
   function handleAddToWatchList(movieObj){
-    const updatedWatchlist = [movieObj]
+    const updatedWatchlist = [...watchList , movieObj]
     setWatchList(updatedWatchlist)
     console.log(updatedWatchlist)
   }  

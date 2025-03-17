@@ -9,7 +9,7 @@ function MovieCard({movieObj , handleAddTowatchlist}) {
           `url(https://image.tmdb.org/t/p/original/${movieObj.poster_path})`,
       }}
     >
-       <div onClick={handleAddTowatchlist(movieObj)}  className="m-4 flex justify-center h-8 w-8 items-center rounded-lg bg-gray-900/60">
+       <div onClick={()=>handleAddTowatchlist(movieObj)}  className="m-4 flex justify-center h-8 w-8 items-center rounded-lg bg-gray-900/60">
        &#128525;
          
         </div>
