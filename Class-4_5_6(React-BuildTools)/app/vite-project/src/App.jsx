@@ -15,7 +15,8 @@ function App() {
       <Card name='Nike Shoes' description='Air Jordan'/>
       <Card name='Sunglasses' description='These are Rayban sunglasses'/> */}
 
-      <GetData/>
+      {/* <GetData/> */}
+      <Form/>
 
     
     </div>

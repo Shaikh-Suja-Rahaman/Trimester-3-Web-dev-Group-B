@@ -30,6 +30,10 @@ function handleSubmit(e){
       <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)} />
 
       <button type="submit">Submit From</button>
+
+      <h1>{name}</h1>
+      <h1>{email}</h1>
+      <h1>{password}</h1>
     </form>
   );
 }
