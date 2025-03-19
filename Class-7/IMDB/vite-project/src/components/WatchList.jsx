@@ -1,4 +1,5 @@
 import { useState } from "react";
+import {genreids} from '../utlities/genre'
 
 function WatchList({watchList}) {
 
@@ -54,7 +55,7 @@ function WatchList({watchList}) {
 
               <td>{movieObj.vote_average}</td>
               <td>{movieObj.popularity}</td>
-              <td>Action</td>
+              <td>{genreids[movieObj.genre_ids[0]]}</td>
 
               <td className="text-red-500">Delete</td>
             </tr>

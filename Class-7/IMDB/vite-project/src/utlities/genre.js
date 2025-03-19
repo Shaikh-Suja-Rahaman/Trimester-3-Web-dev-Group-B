@@ -1,5 +1,4 @@
-
-const genreids = {
+export const genreids = {
     28: "Action",
     12: "Adventure",
     16: "Animation",
@@ -21,7 +20,7 @@ const genreids = {
     37: "Western",
   };
 
-  export default genreids
+
 
 
   // another structure
