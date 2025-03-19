@@ -4,11 +4,16 @@ import axios from "axios";
 import Pagination from "./Pagination";
 
 
-function Movies() {
+function Movies({handleAddtoWatchList , watchlist}) {
   const [movies , setMovies] = useState(null)
   const [loading , setLoading] = useState(true)
   const [page , setPage] = useState(1)
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f7386dcd72dee8031e68fda77da9b75204ca9c04
   const pageNext = ()=>{
      setPage(page+1)
   }
@@ -44,8 +49,13 @@ function Movies() {
         <h1>Trending Movies</h1>
       </div>
       <div className="flex justify-evenly flex-wrap gap-8 ">
+<<<<<<< HEAD
        {loading===true ? <div>Loading...</div> : movies.map((movieObj)=>(
         <MovieCard movieObj={movieObj}/>
+=======
+       {loading===true? <div>Loading...</div>: movies.map((movieObj)=>(
+        <MovieCard movieObj={movieObj} handleAddTowatchlist={handleAddtoWatchList} watchlist={watchlist}/>
+>>>>>>> f7386dcd72dee8031e68fda77da9b75204ca9c04
        ))}
       </div>
      <Pagination pageNext={pageNext} pagePrev={pagePrev} pageNo={page}/>
