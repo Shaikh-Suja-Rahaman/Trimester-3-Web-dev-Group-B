@@ -1,4 +1,4 @@
-import React, { use, useEffect, useState } from "react";
+  import React, { useEffect, useState } from "react";
 import MovieCard from "./MovieCard";
 import axios from "axios";
 import Pagination from "./Pagination";
@@ -8,7 +8,6 @@ function Movies() {
   const [movies , setMovies] = useState(null)
   const [loading , setLoading] = useState(true)
   const [page , setPage] = useState(1)
-
 
   const pageNext = ()=>{
      setPage(page+1)
@@ -30,13 +29,12 @@ function Movies() {
         console.log(response.data.results);
         setMovies(response.data.results)
         setLoading(false)
-         
+
       })
       .catch(function (err) {
         console.log("Cannot call TMDB API ", err);
       });
   }, [page]);
-
 
 
 
@@ -46,7 +44,7 @@ function Movies() {
         <h1>Trending Movies</h1>
       </div>
       <div className="flex justify-evenly flex-wrap gap-8 ">
-       {loading===true? <div>Loading...</div>: movies.map((movieObj)=>(
+       {loading===true ? <div>Loading...</div> : movies.map((movieObj)=>(
         <MovieCard movieObj={movieObj}/>
        ))}
       </div>
