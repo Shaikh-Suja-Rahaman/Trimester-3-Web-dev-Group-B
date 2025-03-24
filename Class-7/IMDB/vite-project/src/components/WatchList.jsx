@@ -16,9 +16,11 @@ function WatchList({ watchList }) {
         })
         console.log(temp)
         
-       const genreArray =  new Set(temp)
+       const genreSet =  new Set(temp)
 
-       console.log(genreArray)
+       console.log(genreSet)
+
+       setGenreList(['All Genres' , ...genreSet])
         
  
   }, [])
@@ -32,9 +34,12 @@ function WatchList({ watchList }) {
     <>
       {/* Genre Based Filtering */}
       <div className="flex justify-center m-4">
-        <div className="mx-4 flex justify-center items-center bg-blue-400 h-[3rem] w-[9rem] text-white font-bold border rounded-xl">
-          All Genres
+        {genreList.map((genre)=>{
+          return  <div className="mx-4 flex justify-center items-center bg-blue-400 h-[3rem] w-[9rem] text-white font-bold border rounded-xl">
+           {genre}
         </div>
+        })}
+       
       </div>
 
       {/* Search Field */}
