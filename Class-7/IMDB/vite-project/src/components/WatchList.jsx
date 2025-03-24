@@ -1,12 +1,32 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { genreids } from "../utlities/genre";
 
 function WatchList({ watchList }) {
   const [search, setSearch] = useState("");
+  const [genreList , setGenreList] = useState([])
 
   function handleSearch(e) {
     setSearch(e.target.value);
   }
+
+
+  useEffect(()=>{
+       let temp= watchList.map((movieObj)=>{
+          return genreids[movieObj.genre_ids[0]]
+        })
+        console.log(temp)
+        
+       const genreArray =  new Set(temp)
+
+       console.log(genreArray)
+        
+ 
+  }, [])
+
+
+
+
+
 
   return (
     <>
